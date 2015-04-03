@@ -29,14 +29,55 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-18",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "FullPacket" ],
+					"patching_rect" : [ 437.0, 274.0, 113.0, 20.0 ],
+					"text" : "o.route /largestface"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-17",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "FullPacket" ],
+					"patching_rect" : [ 320.0, 481.0, 50.0, 20.0 ],
+					"text" : "o.union"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-16",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "FullPacket", "jit_matrix" ],
+					"patching_rect" : [ 411.0, 312.0, 118.0, 20.0 ],
+					"text" : "o.body.face.features"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"fontsize" : 12.0,
 					"id" : "obj-11",
 					"maxclass" : "o.display",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 71.0, 175.0, 382.0, 34.0 ],
-					"presentation_rect" : [ 71.0, 175.0, 0.0, 0.0 ],
+					"patching_rect" : [ 71.0, 175.0, 192.0, 34.0 ],
 					"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ]
 				}
 
@@ -48,8 +89,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 698.0, 285.0, 136.0, 85.0 ],
-					"presentation_rect" : [ 858.0, 165.0, 0.0, 0.0 ]
+					"patching_rect" : [ 551.0, 352.0, 136.0, 85.0 ]
 				}
 
 			}
@@ -166,13 +206,13 @@
 				"box" : 				{
 					"fontsize" : 12.0,
 					"id" : "obj-15",
-					"linecount" : 16,
+					"linecount" : 8,
 					"maxclass" : "o.display",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 121.0, 352.0, 382.0, 238.0 ],
-					"text" : "/faces : {\n\t/rectangle : [152., 132., 252., 232.],\n\t/area : 10000\n},\n/largestface : {\n\t/rectangle : [152., 130., 252., 230.],\n\t/area : 10000\n},\n/eye/left : [172., 160., 190., 178.],\n/eye/right : [218., 169., 218., 169.],\n/nose : [191., 183., 209., 201.],\n/mouth : [191., 203., 209., 221.],\n/frame : [152., 132., 252., 232.],\n/orientation/face : 0.0205793,\n/orientation/eyes : -6.08997,\n/eyes : [162, 152, 233, 167]",
+					"patching_rect" : [ 16.0, 273.0, 382.0, 129.0 ],
+					"text" : "/faces : {\n\t/rectangle : [120., 94., 222., 196.],\n\t/area : 10404\n},\n/largestface : {\n\t/rectangle : [112., 96., 208., 192.],\n\t/area : 9216\n}",
 					"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ]
 				}
 
@@ -195,10 +235,10 @@
 					"id" : "obj-12",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
-					"numoutlets" : 4,
-					"outlettype" : [ "FullPacket", "jit_matrix", "jit_matrix", "FullPacket" ],
-					"patching_rect" : [ 485.0, 285.0, 118.0, 20.0 ],
-					"text" : "o.body.face.features"
+					"numoutlets" : 3,
+					"outlettype" : [ "FullPacket", "jit_matrix", "FullPacket" ],
+					"patching_rect" : [ 431.0, 203.0, 78.0, 20.0 ],
+					"text" : "o.body.faces"
 				}
 
 			}
@@ -356,15 +396,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-11", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-12", 3 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-15", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -374,10 +405,19 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-32", 0 ],
+					"destination" : [ "obj-17", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-12", 1 ]
+					"source" : [ "obj-12", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-18", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-12", 0 ]
 				}
 
 			}
@@ -386,7 +426,25 @@
 					"destination" : [ "obj-4", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-12", 2 ]
+					"source" : [ "obj-12", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-17", 1 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-16", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-32", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-16", 1 ]
 				}
 
 			}
@@ -395,7 +453,16 @@
 					"destination" : [ "obj-7", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-12", 0 ]
+					"source" : [ "obj-17", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-16", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-18", 0 ]
 				}
 
 			}
@@ -441,6 +508,15 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-13", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-22", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-16", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-22", 0 ]
@@ -512,7 +588,7 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "o.body.face.features.maxpat",
+				"name" : "o.body.faces.maxpat",
 				"bootpath" : "/Users/adrian2013/Documents/Max/Packages/o.body/patchers/face",
 				"patcherrelativepath" : "../patchers/face",
 				"type" : "JSON",
@@ -533,6 +609,20 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "o.body.face.features.display.maxpat",
+				"bootpath" : "/Users/adrian2013/Documents/Max/Packages/o.body/patchers/face",
+				"patcherrelativepath" : "../patchers/face",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "o.body.face.features.maxpat",
+				"bootpath" : "/Users/adrian2013/Documents/Max/Packages/o.body/patchers/face",
+				"patcherrelativepath" : "../patchers/face",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "cv.jit.orientation.maxpat",
 				"bootpath" : "/Applications/Max 6.1/patches/cv.jit-support/Abstractions",
 				"patcherrelativepath" : "../../../../../../../Applications/Max 6.1/patches/cv.jit-support/Abstractions",
@@ -543,13 +633,6 @@
 				"name" : "cv.jit.features2track.maxpat",
 				"bootpath" : "/Applications/Max 6.1/patches/cv.jit-support/Abstractions",
 				"patcherrelativepath" : "../../../../../../../Applications/Max 6.1/patches/cv.jit-support/Abstractions",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "o.body.face.features.display.maxpat",
-				"bootpath" : "/Users/adrian2013/Documents/Max/Packages/o.body/patchers",
-				"patcherrelativepath" : "../patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -590,6 +673,10 @@
 				"type" : "iLaX"
 			}
 , 			{
+				"name" : "o.display.mxo",
+				"type" : "iLaX"
+			}
+, 			{
 				"name" : "cv.jit.moments.mxo",
 				"type" : "iLaX"
 			}
@@ -603,10 +690,6 @@
 			}
 , 			{
 				"name" : "cv.jit.features.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "o.display.mxo",
 				"type" : "iLaX"
 			}
  ]
