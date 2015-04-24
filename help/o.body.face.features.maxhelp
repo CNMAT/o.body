@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 0.0, 44.0, 1280.0, 648.0 ],
+		"rect" : [ 109.0, 152.0, 1280.0, 648.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -29,6 +29,102 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-41",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 602.0, 334.0, 34.0, 20.0 ],
+					"text" : "print"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-40",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 578.0, 351.0, 32.5, 20.0 ],
+					"text" : "t"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-39",
+					"maxclass" : "number",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "int", "bang" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 578.0, 351.0, 50.0, 20.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-38",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 580.0, 42.5, 131.0, 18.0 ],
+					"text" : "getinputlist"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-37",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 844.0, 21.0, 108.0, 20.0 ],
+					"text" : "loadmess getinput"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-35",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 562.0, 14.0, 131.0, 18.0 ],
+					"text" : "getinputlist, getvdevlist"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-15",
+					"maxclass" : "jit.fpsgui",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 243.75, 208.5, 80.0, 35.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"fontsize" : 12.0,
 					"id" : "obj-34",
 					"linecount" : 16,
@@ -37,8 +133,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 415.582001, 539.0, 396.254944, 238.0 ],
-					"presentation_rect" : [ 419.680084, 505.429871, 0.0, 0.0 ],
-					"text" : "/faces : {\n\t/rectangle : [204., 76., 308., 180.],\n\t/area : 10816\n},\n/largestface : {\n\t/rectangle : [188., 74., 290., 176.],\n\t/area : 10404\n},\n/eye/left : [210., 103., 228., 121.],\n/eye/right : [246., 103., 264., 121.],\n/nose : [228., 126., 246., 144.],\n/mouth : [228., 145., 246., 163.],\n/frame : [188., 74., 290., 176.],\n/orientation/face : 3.11494,\n/orientation/eyes : -3.25841e-07,\n/eyes : [198, 94, 269, 109]",
+					"text" : "/faces : {\n\t/rectangle : [156., 96., 276., 216.],\n\t/area : 14400\n},\n/largestface : {\n\t/rectangle : [154., 98., 274., 218.],\n\t/area : 14400\n},\n/eye/left : [180., 134., 202., 156.],\n/eye/right : [223., 133., 245., 155.],\n/nose : [201., 159., 223., 181.],\n/mouth : [202., 177., 224., 199.],\n/frame : [154., 98., 274., 218.],\n/orientation/face : 3.12847,\n/orientation/eyes : -0.0232519,\n/eyes : [166, 122, 248, 139]",
 					"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ]
 				}
 
@@ -117,7 +212,7 @@
 					"fontname" : "Arial",
 					"fontsize" : 13.0,
 					"id" : "obj-25",
-					"items" : "<empty>",
+					"items" : "FaceTime HD Camera (Built-in)",
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -376,7 +471,7 @@
 					"fontname" : "Arial",
 					"fontsize" : 13.0,
 					"id" : "obj-30",
-					"items" : "<empty>",
+					"items" : [ "Lumens Document Camera DC122", ",", "Lumens Document Camera DC170", ",", "Visual Presenter V2", ",", "Lumens Document Camera (Recommended)", ",", "Visual Presenter V1", ",", "Lumens Wireless DC1", ",", "DVCPRO HD (1080i50)", ",", "DVCPRO HD (1080i60)", ",", "DVCPRO HD (720p60)", ",", "DV Video", ",", "IIDC FireWire Video", ",", "BT-1 Wireless Webcam", ",", "USB Video Class Video" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -639,8 +734,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
-					"patching_rect" : [ 216.0, 130.0, 175.0, 17.0 ],
-					"text" : "jit.qt.grab 320 240 @vmode 0 @unique 1"
+					"patching_rect" : [ 216.0, 130.0, 129.0, 17.0 ],
+					"text" : "jit.qt.grab 320 240 @unique 1"
 				}
 
 			}
@@ -812,6 +907,15 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-15", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-22", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-16", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -822,6 +926,15 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-32", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-22", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-41", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-22", 1 ]
@@ -964,6 +1077,24 @@
 					"hidden" : 0,
 					"midpoints" : [ 627.699341, 104.265015, 740.702087, 104.265015 ],
 					"source" : [ "obj-32", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-22", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-35", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-22", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-38", 0 ]
 				}
 
 			}
