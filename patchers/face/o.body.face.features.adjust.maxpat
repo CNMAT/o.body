@@ -3,13 +3,13 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 7,
-			"minor" : 0,
-			"revision" : 4,
+			"minor" : 1,
+			"revision" : 0,
 			"architecture" : "x86",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 132.0, 168.0, 1372.0, 666.0 ],
+		"rect" : [ 42.0, 99.0, 1372.0, 666.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 9.0,
@@ -121,13 +121,13 @@
 					"fontface" : 0,
 					"fontsize" : 9.0,
 					"id" : "obj-85",
-					"linecount" : 2,
+					"linecount" : 6,
 					"maxclass" : "o.expr.codebox",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "FullPacket", "FullPacket" ],
-					"patching_rect" : [ 91.806015, 544.5578, 1104.945557, 40.0 ],
-					"text" : "/newCenter = [.5 * (/newBox[[0]] + /newBox[[2]]) + /offset[[0]], .5 * (/newBox[[1]] + /newBox[[3]]) + /offset[[1]]],\nassign(value(/featureName), /newCenter)",
+					"patching_rect" : [ 91.806015, 544.5578, 1104.945557, 80.0 ],
+					"text" : "if( length(/offset) > 0,\n  progn( \n    /newCenter = [.5 * (/newBox[[0]] + /newBox[[2]]) + /offset[[0]], .5 * (/newBox[[1]] + /newBox[[3]]) + /offset[[1]]],\n    assign(value(/featureName), /newCenter)\n  )\n)",
 					"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ]
 				}
 
@@ -329,7 +329,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 91.806015, 620.012268, 25.0, 25.0 ],
+					"patching_rect" : [ 91.806015, 637.012268, 25.0, 25.0 ],
 					"style" : ""
 				}
 
@@ -515,7 +515,29 @@
 				}
 
 			}
- ]
+ ],
+		"dependency_cache" : [ 			{
+				"name" : "cv.jit.shift.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "o.expr.codebox.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "o.union.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "o.route.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "o.pack.mxo",
+				"type" : "iLaX"
+			}
+ ],
+		"autosave" : 0
 	}
 
 }
